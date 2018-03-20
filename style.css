@@ -1,43 +1,44 @@
- *, *::before, *::after {
-  box-sizing: border-box;
-}
- 
- * {
-	 margin: 0;
-	 padding: 0;
-	 box-sizing: borer-box;
- }
 
- 
+	/* ---------- GENERAL ---------- */
+	 *, *::before, *::after {
+	  box-sizing: border-box;
+	}
+	 
+	 * {
+		 margin: 0;
+		 padding: 0;
+		 box-sizing: border-box;
+	 }
 
 	body {
 		color: black;
-		font: 18px 'Open Sans', Arial, sans-serif;
+		font-family: 'Quicksand', sans-serif;
+		font-size: 19px;
 	}
 	
- .container {
-	 max-width: 900px;
-	 margin-left: auto;
-	 margin-right: auto;
-	 padding-left: 15px;
-	 padding-right: 15px;
- }	 
-	 
-	.header {
-	min-height: 100vh;	
-	padding-top: 250px;
-	pading-bottom: 250px;
-	background: url('background.jpg') center/cover no-repeat;
-	text-align: center;
-	color: #fff;
-	text-shadow: 0 0 15px rgba(0, 0, 0, .3);
+	/* ---------- LAYOUT - GENERAL FOR SECCTIONS --------- */
+	 .section { 
+		 text-align: center;
+			padding: 30px 60px;		 
+		
+	} 
+	
+	.section:nth-of-type(even) {
+		background: #f3f3f3;
+		padding: 30px 30px;
 	}
 	
-	.header h1 {
-		margin-bottom:  30px;
-		font-size: 72px;
+	.section *:not(:first-child) {
+		margin-bottom: 30px;
 	}
 	
+	section h2 {
+		text-align: center;
+	}
+	
+	
+	
+	/* -------- NAVIGATION -------- */
 	.nav {
 		top: 0;
 		line-height: 70px;
@@ -49,7 +50,7 @@
 	
 	.nav ul {
 		display: flex;
-		just-content: space-between;
+		justy-content: space-between;
 		list-style: none;
 	}
 	
@@ -70,73 +71,145 @@
 					
 	}
 	
-	 .section { 
-		 text-align: justify;
-			padding: 30px 60px;		 
-		
-	} 
-	section h2
-	{
-		text-align: center;
-	}
 	
-	.section:nth-of-type(even) {
-		background: #f3f3f3;
-		padding: 30px 30px;
-		
+	/* -------- HEADER -------- */
+	.header p {
+		font-size: 35px;
 	}
-	
-	.section *:not(:first-child) {
-		margin-bottom: 30px;
-	}
-	
-	#kontakt {
-	 width: 100%;
-	 margin-top: 40px;
-	 /* margin-left: 60px ; */
-	 /* margin-right: 60px ; */
+
 	 
+	.header {
+	min-height: 92vh;	
+	padding-top: 250px;
+	paddinging-bottom: 250px;
+	background: url('background.jpg') center/cover no-repeat;
+	text-align: center;
+	color: #fff;
+	text-shadow: 0 0 15px rgba(0, 0, 0, .3);
+	}
+	
+	.header h1 {
+		margin-bottom:  35px;
+		font-size: 82px;
+		font-family: 'Orbitron', sans-serif;
+	}
+	
+		
+	.heder-container {
+	 max-width: 900px;
+	 margin-left: auto;
+	 margin-right: auto;
+	 padding-left: 15px;
+	 padding-right: 15px;
+	}	 
+	
+	/*-------- O NAS ----------*/
+	#o-nas p {
+	font-size: 20px;
+	}
+		
+	/* -------- OFERTA -------- */
+	.oferta-container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		 justify-content: space-around; 
+		/* border: 1px solid red; */
+		text-align: justify;
+		}
+	
+			.one {
+		/* border: 1px solid blue; */
+		line-height: 1.6;
+		}
+
+		.two {
+		/* border: 1px solid blue; */
+		line-height: 1.6;
+
+		}
+
+		.three {
+		/* border: 1px solid blue; */
+		line-height: 1.6;
+
+		}
+	
+		#oferta p {
+		text-align: center;
+		}
+
+	/* ------- CONTACT ------ */
+	
+		.contact-container {
+		/* border: solid 1px blue; */
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		 overflow: hidden;
+	}
+	
+	
+	.adres {
+	/* border: 1px solid red; */
+	padding: 10px;
+	text-align: center;
+	/* flex-shrink: 3; */
+	align-self: center;
+	}
+	
+	.form {
+		/* border: 1px solid red; */
+		padding: 10px;
+		flex-shrink: 7;
+		max-width: 400px;
+	}
+	
+	.map {
+	/* border: 1px solid red; */
+	align-self: center;
+	flex-shrink: 3;
 	}
 	
 	.item {
-		/* border: solid 1px; */
-		float: left;
-		width: 50%;
-		height: 400px;
-		text-align: center;	
-		padding: 30px;
+		margin: 10px;
+	}
+
+	.adres p {
+		font-size: 23px;
 	}
 	
+	/* ------- format of form's bits  ------ */
 	#email {
 		margin-left: 88px;
 	}
 	
-	#submit, #wyslij {
+	#submit, #reset {
 		width: 60px;
-		height: 30px;
+		height: 30px;	
+		margin: 5px;
 	}
-
 	
-	 
-	.map {
-		text-align: center;
-		margin-bottom: 10px;
+	.buttons {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
 	}
+	
+	/* ---------- FOOTER ---------- */
 	
 	.footer p {
-
-		float: block;
 		padding: 30px;
 		text-align: center; 	
 	}
-	
-	@media only screen and (max-width: 900px) {
-	#kontakt .item {
-	float: clear;
-	}	
-	}
+
 	
 	
 	
+	/* ---------- DETAILED CLASSES ---------- */
 	
-	
+			.bold {
+		font-weight: bold;
+		}
+
